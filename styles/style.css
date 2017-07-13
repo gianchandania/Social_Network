@@ -271,7 +271,7 @@
       .ion-ios-person {
         font-size: 50px;
         float: left;
-        padding-top: 70px; 
+        padding-top: 75px; 
       }
 
       .profile-title {
@@ -307,7 +307,8 @@
 
       .feed-title {
         float: left;
-        padding-top: 70px; 
+        padding-top: 75px; 
+        font-size: 1.5em;
       }
 
       .posts {
@@ -315,20 +316,14 @@
         padding: 10px;
       }
 
-      .trial {
-        background-color: #000000;
-        height: 100px;
-        width: 100px;
-      }
-
       #imgDiv {
-      width: 200px;
-      height: 200px;
+        width: 200px;
+        height: 200px;
       }
 
       .images1 img {
-      float: right;
-      width: 100%;
+        float: right;
+        width: 100%;
       }
 
       .postD {
@@ -388,6 +383,18 @@
       .figimage {
         width:60%;
         height:auto;
+      }
+
+      .ion-ios-chatboxes {
+        font-size: 1.2em;
+      }
+
+      .ion-thumbsup {
+        font-size : 1.2em;
+      }
+
+      .likelink {
+        font-size: 1.2em;
       }
 
 
@@ -489,7 +496,8 @@
       }
 
       .feed-title {
-         padding-top: 20px;
+         padding-top: 29px;
+         font-size: 1.5em;
       }
 
       .ion-ios-paper {
@@ -508,11 +516,11 @@
       }
 
       h3 {
-        font-size: 1em;
+        font-size: 1.1em;
       }
 
       h2 {
-        font-size: 1.1em;
+        font-size: 1.2em;
       }
 
       #profile-menu .infotext {
@@ -584,23 +592,23 @@
 
       .ion-ios-person {
         font-size: 40px;
-         padding-top: 25px;
+        padding-top: 30px;
       }
 
       h4 {
-        font-size: 1.0em;
-      }
-
-      h3 {
         font-size: 0.9em;
       }
 
-      h2 {
+      h3 {
         font-size: 1.0em;
       }
 
+      h2 {
+        font-size: 1.1em;
+      }
+
       #profile-menu .infotext {
-        font-size: 0.7em;
+        font-size: 0.8em;
       }
 
       .postimg {
@@ -617,7 +625,7 @@
 @media only screen and (max-width: 480px) {
 
 
-      body { font-size: 14px; }
+      body { font-size: 16px; }
 
       #profile-image {
         visibility: hidden;
@@ -687,7 +695,7 @@
 
       .ion-ios-person {
         font-size: 35px;
-        padding-top: 20px;
+        padding-top: 28px;
       }
 
       .profile-title {
@@ -695,11 +703,11 @@
       }
 
       h4 {
-        font-size: 0.7em;
+        font-size: 0.9em;
       }
 
       h3 {
-        font-size: 0.8em;
+        font-size: 0.9em;
       }
 
       h2 {
@@ -707,7 +715,7 @@
       }
 
       #profile-menu .infotext {
-        font-size: 0.7em;
+        font-size: 0.70em;
       }
 
       .postimg {
@@ -717,5 +725,18 @@
       .figimage {
         width: 100%;
       }
+
+      .ion-ios-chatboxes {
+        font-size: 1.1em;
+      }
+
+      .ion-thumbsup {
+        font-size : 1.1em;
+      }
+
+      .likelink {
+        font-size: 1.1em;
+      }
+
 
 }

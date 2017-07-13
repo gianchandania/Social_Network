@@ -1,7 +1,7 @@
 
 $( document ).ready(function() {
 
-	var myFacebookToken = "EAACEdEose0cBAPrXPDBEdA42GBW0b072Fkcq9p823SUNZCAkEiP91KeeQzqRTTP2rtrBpAekRmYwRSmLYKa3f4O7mlIwZAvZBsNbWmelZB04bhQu4RmZAfZB6fR6wOGiW9oJiDIsupsH5L00SwuYZAij0pFJJZAuzxcwd8cqZAPa8X57dCJsNEpMB4s6ZCWh7iMLEZD";
+	var myFacebookToken = "EAACEdEose0cBAIArFLsrwDHjJJWZCZBaknfelnEpBwpyYyZAFTC1A4zGdoKKrWYVxcUrnZB7ef059vAU8fKQPQBe2fgRJvu6IpiUGhCs1B7JoQ5oCVnR0d2IKVHnCAEZA0FcHfbXOa9I6TgXiwmo31eP8scijmPbhm2Ro2FX1w7Ue0pv00J8RqlTMogJslbwZD";
 	 
 	/*Function to display the Home Page to the User*/
 
@@ -80,7 +80,7 @@ $( document ).ready(function() {
 
 	            var locale = "en-us";
 	              
-	            (response1.birthday != undefined) ? ([date, month1, year] = response1.birthday.split("/")) : "";
+	            (response1.birthday != undefined) ? ([month1, date, year] = response1.birthday.split("/")) : "";
 				
 				(response1.birthday != undefined) ? (month = new Date(response1.birthday).toLocaleString(locale, { month: "long" })) : "";
 	                       		
@@ -378,7 +378,7 @@ $( document ).ready(function() {
 
                     })) : postComments.push('<span>No Comments</span>');
 
-                    var likeComment = ('<div style="padding-top:10px"><a data-toggle="collapse" href="#collapseE'+[index1]+'" aria-expanded="false" aria-controls="collapseE'+[index1]+'"><i class="ion-ios-chatboxes"></i>&nbsp;Likes</a><div class="collapse" id="collapseE'+[index1]+'"><div class="well">'+postLikes.join(" ")+'</div></div>'+'<br>'+'<a data-toggle="collapse" href="#collapseB'+[index1]+'" aria-expanded="false" aria-controls="collapseB'+[index1]+'"><i class="ion-thumbsup"></i>&nbsp;Comments</a><div class="collapse" id="collapseB'+[index1]+'"><div class="well">'+postComments.join(" ")+'</div></div></div>');
+                    var likeComment = ('<div class="likelink" style="padding-top:10px"><a data-toggle="collapse" href="#collapseE'+[index1]+'" aria-expanded="false" aria-controls="collapseE'+[index1]+'"><i class="ion-ios-chatboxes"></i>&nbsp;Likes</a><div class="collapse" id="collapseE'+[index1]+'"><div class="well">'+postLikes.join(" ")+'</div></div>'+'<br>'+'<a data-toggle="collapse" href="#collapseB'+[index1]+'" aria-expanded="false" aria-controls="collapseB'+[index1]+'"><i class="ion-thumbsup"></i>&nbsp;Comments</a><div class="collapse" id="collapseB'+[index1]+'"><div class="well">'+postComments.join(" ")+'</div></div></div>');
                     	
                     if (response.data[index1].story != undefined){
 
