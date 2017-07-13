@@ -167,7 +167,7 @@
         height: 35px;
         position: absolute;
         top: 45%;
-        left: 50%;
+        left: 45%;
         transform: translate(-50%, -50%);
         display: none;
         animation: spin 2s ease-in infinite;

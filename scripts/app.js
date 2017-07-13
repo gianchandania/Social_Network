@@ -1,7 +1,7 @@
 
 $( document ).ready(function() {
 
-	var myFacebookToken = "EAACEdEose0cBAIArFLsrwDHjJJWZCZBaknfelnEpBwpyYyZAFTC1A4zGdoKKrWYVxcUrnZB7ef059vAU8fKQPQBe2fgRJvu6IpiUGhCs1B7JoQ5oCVnR0d2IKVHnCAEZA0FcHfbXOa9I6TgXiwmo31eP8scijmPbhm2Ro2FX1w7Ue0pv00J8RqlTMogJslbwZD";
+	var myFacebookToken = "EAACEdEose0cBAM0U54K14sxaELzQxy65l94a5OhmD5Nt7ZC8bbsR3PYP2tau1HLOy3lseHjCzHixMww1bXG5Hqb34hNBkNUwGeKtytGhTZBCvUgTG25dwPSFYaSdIJuDJ1dVJhQz1yXrgAnwrnUEzB0tmtk8hZCr4J2tBvX6MJtZCHTxVzxeuZCyQxgxt4B4ZD";
 	 
 	/*Function to display the Home Page to the User*/
 
@@ -230,6 +230,8 @@ $( document ).ready(function() {
                     
                 (response.location != undefined) ? $("#location").html('<h4> Current City </h4><p>' + response.location.name + '</p><br>') : $("#location").html('<h4> Current City </h4><p>This information is not available</p><br>') ;
 
+        /*To print the details of Education of the user */
+
                 var myEducation = [];
 
 					(response.education != undefined) ? ($(response.education).each(function(index) {
@@ -241,6 +243,8 @@ $( document ).ready(function() {
                 })) : ""; 
                    
                 (response.education != undefined) ? $("#education").html('<h4> Education </h4><p>' + myEducation.join("<br>") + '</p>' ) : $("#education").html('<h4> Education </h4><p>This information is not available</p>' );
+
+         /*To print the details of Work of the user */      
 
                 var myWork = [];
                     
@@ -362,15 +366,19 @@ $( document ).ready(function() {
 
                     var msgpost = (response.data[index1].message != undefined) ? (response.data[index1].message) : "";
 
-                    var postLikes = [];
+                    var postLikes = [];            
 
                     var postComments = [];
+
+        /*To print the details of Likes on posts of the user */            
 
                     (response.data[index1].likes != undefined) ? ($(response.data[index1].likes.data).each(function(index2) {
 
                     	postLikes.push('<span class="commentname">' + response.data[index1].likes.data[index2].name + '</span><br>');
 
                     })) : postLikes.push('<span>No Likes</span>');
+
+        /*To print the details of Comments on posts of the user */            
 
                     (response.data[index1].comments != undefined) ? ($(response.data[index1].comments.data).each(function(index2) {
 
