@@ -1,0 +1,721 @@
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+      
+      html,
+      body {
+        background-color: #E9EBEE;
+        color: #ffffff;
+        font-family: 'Lato', 'Arial', sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+
+
+/* ----------------------------------------------- */
+/* NAVIGATION BAR */
+/* ----------------------------------------------- */
+
+
+
+      .navbar-default {
+        background-color: rgba(0, 119, 181, 0.85);
+        border: none;
+      }
+
+      .navbar-default .navbar-header > a:link,
+      .navbar-default .navbar-header > a:visited{
+        color: #ffffff;
+        font-size: 1.8em;
+      }
+
+      .navbar-default .navbar-header > a:hover,
+      .navbar-default .navbar-header > a:active{
+        color: #ffffff;
+      }
+
+      .navbar-default .navbar-header button {
+        height: 45px;
+        width: 50px;
+        
+      }
+
+      .navbar-default .navbar-nav > li > a {
+        color: #ffffff;
+        font-size: 1.3em;
+      }
+
+      .navbar-default .navbar-nav > li > a:hover,
+      .navbar-default .navbar-nav > li > a:focus {
+          color: #ffffff;
+          background-color: #005582;
+      }
+
+      .navbar-default .navbar-nav > .active > a,
+      .navbar-default .navbar-nav > .active > a:hover,
+      .navbar-default .navbar-nav > .active > a:focus {
+        background-color: #005582;
+        color: #ffffff;
+      }
+
+      .navbar-default .navbar-toggle:hover,
+      .navbar-default .navbar-toggle:active {
+        background-color: transparent;
+      }
+
+      #profile-image {
+        position: absolute;
+        top: 5px;
+        right: 26em;
+        display: none;
+        cursor: pointer;
+      }
+
+      #user-name {
+        position: absolute;
+        top: 8px;
+        right: 18.5em;
+        font-size: 1.2em;
+        display: none;
+        cursor: pointer;
+      }
+
+      #user-name:hover {
+        background-color: #005582;
+        color: #ffffff;
+        padding: 2px;
+      }
+
+      .menu {
+        width: 35px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 6px 0;
+      }
+
+      .menu-icon {
+        position: absolute;
+        top: 15%;
+        right: 2%;
+        border: transparent;
+        padding: 0;
+        margin: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+
+
+
+      .container {
+        color: #333333;
+      }
+
+      section {
+        padding-bottom: 2%;
+      }
+
+      hr {
+        border: 0;
+        clear:both;
+        display:block;
+        width: 100%;               
+        background-color:#a3a5a8;
+        height: 1.5px;
+        margin-bottom: 30px;
+      }
+
+      h3 {
+        font-size: 1.1em;
+      }
+
+      h4 {
+        font-size: 1em;
+        color: #0077b5;
+      }
+
+      h2 {
+        color: #2b2b2b;
+        font-size: 1.2em;
+      }
+
+
+
+
+/* ----------------------------------------------- */
+/* LOADER */
+/* ----------------------------------------------- */
+
+
+
+
+      .loader {
+        border: 3px solid #0077b5;                                   
+        margin-top: 20px;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        animation: spin 2s ease-in infinite;
+      }
+
+      .loader-inner {
+        background-color: #0077b5;
+        width: 100%;
+        animation: fill 2s ease-in infinite;
+      }
+
+      @keyframes fill {
+        0% {height: 0%;}
+        25% {height: 0%;}
+        50% {height: 100%;}
+        75% {height: 100%;}
+        100% {height: 0%;} 
+      }
+      
+      @keyframes spin {
+        0% {transform: rotate(0deg);}
+        25% {transform: rotate(180deg);}
+        50% {transform: rotate(180deg);}
+        75% {transform: rotate(360deg);}
+        100% {transform: rotate(360deg);}       
+      }
+
+
+
+
+/* ----------------------------------------------- */
+/* HOME PAGE */
+/* ----------------------------------------------- */
+
+
+
+
+      #homePage {
+        width: 80%;
+        margin-left: 10%;
+        position: relative;
+        display: none;
+        margin-top: 30px;
+      }
+
+      #images {
+        background-color: #ffffff;
+        width: 100%;
+        margin-top: 10%;
+      }
+
+      #coverimage {
+        margin: 0px -13px;
+        margin-bottom: 35px;
+        display: block;
+      }
+
+      #home-profile-image {
+        position: absolute;
+        top: 52%;
+        left: 2%;
+        border: 3px solid #ffffff;
+      }
+
+      #home-name-text {
+        color: #2B2B2B;
+        position: absolute;
+        top: 90%;
+        left: 21.5%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+
+      .home-overview {
+        padding-left: 1.3%;
+      }
+
+      .overview-text {
+        background-color: #ffffff;
+        padding-top: 10px;
+        padding-left: 15px;
+      }
+
+      
+
+
+/* ----------------------------------------------- */
+/* PROFILE PAGE */
+/* ----------------------------------------------- */
+
+
+
+      #profile-page {
+        width: 80%;
+        margin-left: 10%;
+        display: none;
+      }
+      
+      .ion-ios-person {
+        font-size: 50px;
+        float: left;
+        padding-top: 70px; 
+      }
+
+      .profile-title {
+        float: left;
+        padding-top: 70px; 
+      }
+
+      #profile-menu .infotext {
+        font-size: 0.8em;
+      }
+
+
+
+/* ----------------------------------------------- */
+/* FEED PAGE */
+/* ----------------------------------------------- */
+
+
+      
+      #feed-page {
+        width: 80%;
+        margin-left: 10%;
+        position: relative;
+        padding: 3% 0;
+        display: none;
+      }
+
+      .ion-ios-paper {
+        font-size: 50px;
+        float: left;
+        padding-top: 70px; 
+      }
+
+      .feed-title {
+        float: left;
+        padding-top: 70px; 
+      }
+
+      .posts {
+        background-color: #ffffff;
+        padding: 10px;
+      }
+
+      .trial {
+        background-color: #000000;
+        height: 100px;
+        width: 100px;
+      }
+
+      #imgDiv {
+      width: 200px;
+      height: 200px;
+      }
+
+      .images1 img {
+      float: right;
+      width: 100%;
+      }
+
+      .postD {
+        color: #8b8d8e;
+        font-size: 0.8em;
+      }
+
+      .postmsg {
+        font-size: 1.2em;
+      }
+
+      .postmsg1 {
+        font-size: 1.2em;
+      }
+
+      .postmsgdate {
+        font-size: 1em;
+      }
+
+      .postT {
+        font-size: 1.2em;
+      }
+
+      .commentname {
+        color: #0077b5;
+        font-size: 0.9em;
+      }
+
+      .commentmsg {
+        color: #2B2B2B;
+        font-size: 0.9em;
+      }
+
+      .post1 a {
+        text-decoration: none;
+        color: #2B2B2B;
+      }
+
+      .picname {
+        font-size: 1.2em;
+      }
+
+      .picdesc {
+        font-size: 0.9em;
+      }
+
+      .piccaption {
+        font-size: 0.8em;
+        color: #8b8d8e;
+      }
+
+      .postimg {
+        width:60%;
+        height:auto; 
+      }
+
+      .figimage {
+        width:60%;
+        height:auto;
+      }
+
+
+
+/* ----------------------------------------------- */
+/* MEDIA QUERIES */
+/* ----------------------------------------------- */
+
+
+
+@media only screen and (max-width: 1200px) {
+
+      #homePage {
+        width: 90%;
+        margin-left: 5%;
+      }
+
+      #home-name-text {
+        font-size: 1.2em;
+        top: 90%;
+        left: 23.5%;
+      }
+
+      #profile-image {
+        visibility: visible;
+      }
+
+      #user-name {
+        visibility: visible;
+      }
+
+      .postimg {
+        width:60%;
+        height:auto; 
+      }
+
+      .figimage {
+        width:60%;
+        height:auto;
+      }
+
+      #feed-page {
+        width: 90%;
+        margin-left: 5%;
+      }
+
+      #profile-page {
+        width: 90%;
+        margin-left: 5%;
+      }
+
+}
+    
+      
+@media only screen and (max-width: 1023px) {
+
+      body { font-size: 18px; }
+    
+      #homePage {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 30px;
+      }
+
+      #home-profile-image img {
+        width: 130px;
+        height: 150px;
+        border: 3px solid #ffffff;
+      }
+
+      #home-name-text {
+        font-size: 1.2em;
+        top: 90%;
+        left: 23%;
+      }
+
+      #profile-image {
+        visibility: visible;
+      }
+
+      #user-name {
+        visibility: visible;
+      }
+
+      #profile-page {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 7%;
+      }
+
+      #feed-page {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 7%;
+      }
+
+      .profile-title {
+         padding-top: 20px;
+      }
+
+      .feed-title {
+         padding-top: 20px;
+      }
+
+      .ion-ios-paper {
+        font-size: 50px;
+        padding-top: 20px;
+      }
+
+      .ion-ios-person {
+        font-size: 50px;
+        padding-top: 20px;
+        float: left;
+      }
+
+      h4 {
+        font-size: 1.0em;
+      }
+
+      h3 {
+        font-size: 1em;
+      }
+
+      h2 {
+        font-size: 1.1em;
+      }
+
+      #profile-menu .infotext {
+        font-size: 0.8em;
+      }
+
+      .postimg {
+        width:60%;
+        height:auto; 
+      }
+
+      .figimage {
+        width:60%;
+        height:auto;
+      }
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+      body { font-size: 16px; }
+
+      #homePage {
+        margin-top: 40px;
+      }
+  
+      #profile-image {
+        visibility: hidden;
+      }
+
+      #user-name {
+        visibility: hidden;
+      }
+
+      #coverimage img {
+        width: 100%;
+        height: 250px;
+      }
+
+      #home-name-text {
+        font-size: 1.2em;
+        left: 32%;
+        top: 88%;
+      }
+
+      #home-profile-image img {
+        width: 120px;
+        height: 120px;
+        border: 3px solid #ffffff;
+      }
+
+      #profile-page {
+        display: none;
+      }
+
+      .profile-title {
+         padding-top: 25px;
+      }
+
+      .ion-ios-paper {
+        font-size: 40px;
+        padding-top: 20px;
+      }
+
+      .feed-title {
+         padding-top: 20px;
+      }
+
+      .ion-ios-person {
+        font-size: 40px;
+         padding-top: 25px;
+      }
+
+      h4 {
+        font-size: 1.0em;
+      }
+
+      h3 {
+        font-size: 0.9em;
+      }
+
+      h2 {
+        font-size: 1.0em;
+      }
+
+      #profile-menu .infotext {
+        font-size: 0.7em;
+      }
+
+      .postimg {
+        width: 100%;
+      }
+
+      .figimage {
+        width: 100%;
+      }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+
+
+      body { font-size: 14px; }
+
+      #profile-image {
+        visibility: hidden;
+      }
+
+      #user-name {
+        visibility: hidden;
+      }
+
+      #homePage {
+        margin-top: 40px;
+      }
+
+      #coverimage  {
+        margin-bottom: 60px;
+      }
+   
+      #coverimage img {
+        width: 100%;
+        height: 200px;
+      }
+
+      #home-name-text {
+        font-size: 0.85em;
+        left: 50%;
+        top: 96%;
+        color: #2B2B2B;
+        transform: translate(-50%, -50%);
+      }
+
+      #home-profile-image {
+        position: absolute;
+        top: 78%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #home-profile-image img {
+        width: 85px;
+        height: 85px;
+        border: 3px solid #ffffff;
+        padding-bottom: 5px;
+      }
+
+      #feed-page {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      #profile-page {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 12%;
+        display: none;
+      }
+
+      .ion-ios-paper {
+        font-size: 35px;
+        padding-top: 10%;
+      }
+
+      .feed-title {
+        padding-top: 10%; 
+      }
+
+      .ion-ios-person {
+        font-size: 35px;
+        padding-top: 20px;
+      }
+
+      .profile-title {
+         padding-top: 20px;
+      }
+
+      h4 {
+        font-size: 0.7em;
+      }
+
+      h3 {
+        font-size: 0.8em;
+      }
+
+      h2 {
+        font-size: 1em;
+      }
+
+      #profile-menu .infotext {
+        font-size: 0.7em;
+      }
+
+      .postimg {
+        width: 100%;
+      }
+
+      .figimage {
+        width: 100%;
+      }
+
+}
