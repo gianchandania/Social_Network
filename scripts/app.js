@@ -1,7 +1,7 @@
 
 $( document ).ready(function() {
 
-	var myFacebookToken = "EAACEdEose0cBANDFpkIowLZCUoSExXTZBtXJZBbePDkOiReNkxDZAVpfu33dK5VZAZBMXpMXUoJQGFDBVzD8hXXGI9aQR2WkN5F2yPztZBNBgt0xhEGlYif904Wfxtaqou0ZCZBp9OZAFpLIZAD1eAmAX5BKelyIFBmZByGtIs7qzAiZAdCePWDtyro1udnZCxh8pZAn50ZD";
+	var myFacebookToken = "EAACEdEose0cBALZBydNkZAZA4gwrhmHXWZAmUar5hmMRnuEOYsnZBr0hxZA2bQ76C7Lw9bmMbjAqyDNwu2CcENVLisNfE7ZCL578C3zUh5WNRPb2eKZBrVIhfaknB4HZBQb2kXSR8VHUFaPEmxRX8ZCJcGIxAj2ZCc4xrojfnrndxRGleMYODzgCvRH6oWFUy1EbZA8ZD";
 	 
 	/*Function to display the Home Page to the User*/
 
